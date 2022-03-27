@@ -81,4 +81,11 @@ func main() {
 	courses = append(courses[:index], courses[index+1:]...)
 
 	fmt.Println(courses)
+
+	// can we remove a value from the slice based on value ?
+	// remove the value "java"
+	index = sort.SearchStrings(courses, "java")
+	courses = append(courses[:index], courses[index+1:]...)
+
+	fmt.Println(courses)
 }
